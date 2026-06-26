@@ -32,8 +32,22 @@ export default buildConfig({
       titleSuffix: '- Sherlock AI',
     }
   },
-  cors: ['http://localhost:5173', 'http://localhost:4000', 'https://sherlock-ivory.vercel.app', process.env.FRONTEND_URL || ''].filter(Boolean),
-  csrf: ['http://localhost:5173', 'http://localhost:4000', 'https://sherlock-ivory.vercel.app', process.env.FRONTEND_URL || ''].filter(Boolean),
+  cors: [
+    'http://localhost:5173', 
+    'http://localhost:4000', 
+    'https://sherlock-ivory.vercel.app', 
+    process.env.FRONTEND_URL || '',
+    process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''
+  ].filter(Boolean),
+  csrf: [
+    'http://localhost:5173', 
+    'http://localhost:4000', 
+    'https://sherlock-ivory.vercel.app', 
+    process.env.FRONTEND_URL || '',
+    process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''
+  ].filter(Boolean),
   collections: [Users, Media, Posts, Testimonials],
   globals: [SiteSettings],
   editor: lexicalEditor(),
