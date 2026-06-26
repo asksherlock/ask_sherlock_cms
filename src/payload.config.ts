@@ -32,8 +32,8 @@ export default buildConfig({
       titleSuffix: '- Sherlock AI',
     }
   },
-  cors: ['http://localhost:5173', 'http://localhost:4000'],
-  csrf: ['http://localhost:5173', 'http://localhost:4000'],
+  cors: ['http://localhost:5173', 'http://localhost:4000', 'https://sherlock-ivory.vercel.app', process.env.FRONTEND_URL || ''].filter(Boolean),
+  csrf: ['http://localhost:5173', 'http://localhost:4000', 'https://sherlock-ivory.vercel.app', process.env.FRONTEND_URL || ''].filter(Boolean),
   collections: [Users, Media, Posts, Testimonials],
   globals: [SiteSettings],
   editor: lexicalEditor(),
