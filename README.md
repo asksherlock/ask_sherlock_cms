@@ -41,8 +41,8 @@ Supabase ha migrado sus conexiones directas a **IPv6**. Si tu proveedor de inter
 
 ### 2. Clonar el repositorio
 ```bash
-git clone https://github.com/ivaninnogyzer/sherlock-cms.git
-cd sherlock-cms
+git clone https://github.com/asksherlock/ask_sherlock_cms.git
+cd ask_sherlock_cms
 ```
 
 ### 3. Configurar Variables de Entorno
