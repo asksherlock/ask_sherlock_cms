@@ -1,4 +1,12 @@
-# 🕵️‍♂️ Sherlock CMS (Backend)
+<div align="center">
+  <img src="./public/ask_sherlock_logo_b.png" alt="Sherlock AI Logo" width="250" />
+  <h1>Sherlock CMS (Backend)</h1>
+  <p><strong>Panel Administrador Headless con Payload CMS y Supabase</strong></p>
+</div>
+
+---
+
+## 🚀 Overview
 
 Este repositorio contiene exclusivamente el Backend (Payload CMS 3.0) para la plataforma Sherlock AI.
 Está separado del repositorio del frontend para asegurar un despliegue aislado y modular.
@@ -8,6 +16,21 @@ Está separado del repositorio del frontend para asegurar un despliegue aislado 
 *   **CMS**: Payload CMS 3.0 (Next.js App Router)
 *   **Base de Datos**: PostgreSQL (alojada en Supabase)
 *   **Aislamiento de Datos**: Esquema personalizado (`schemaName: 'sherlock'`) para prevenir conflictos en bases de datos compartidas.
+*   **Almacenamiento (S3)**: Supabase Storage para imágenes y documentos.
+
+---
+
+## 📂 Arquitectura de Colecciones
+
+El panel está estructurado para gestionar las siguientes entidades de contenido dinámico:
+
+1. **Blog (`Posts`):** Artículos completos utilizando el editor Lexical, vinculados a autores y categorías.
+2. **Testimonios (`Testimonials`):** Reseñas de clientes para mostrar en la landing page.
+3. **Usuarios (`Users`):** Gestión de administradores del panel.
+4. **Media (`Media`):** Repositorio centralizado de imágenes subidas al bucket S3.
+5. **Ajustes (`SiteSettings`):** Configuraciones globales de la plataforma.
+
+---
 
 ## 🛠️ Instalación y Uso Local
 
@@ -51,4 +74,18 @@ npm run dev
 *   **API del CMS**: `http://localhost:4000/api`
 
 ---
-*Desarrollado con ❤️ para Sherlock AI.*
+
+## ☁️ Despliegue en Producción (Vercel)
+
+Este proyecto está optimizado para desplegarse de manera sencilla en **Vercel**.
+
+1. Crea un nuevo proyecto en Vercel e importa este repositorio.
+2. Ve a la pestaña de **Environment Variables** y pega todo el contenido de tu `.env` (asegúrate de incluir `FRONTEND_URL` apuntando a tu landing page desplegada).
+3. Haz clic en **Deploy**.
+4. Copia la URL pública que te genere Vercel y añádela como `VITE_CMS_URL` en tu proyecto Frontend para enlazar ambas aplicaciones.
+
+---
+
+<div align="center">
+  <em>Desarrollado con ❤️ para Sherlock AI.</em>
+</div>
