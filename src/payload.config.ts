@@ -28,6 +28,10 @@ export default buildConfig({
         Icon: '@/components/Icon#Icon',
       }
     },
+    meta: {
+      titleSuffix: '- Sherlock AI',
+    }
+  },
   cors: [
     'http://localhost:5173', 
     'http://localhost:4000', 
