@@ -28,17 +28,15 @@ export default buildConfig({
         Icon: '@/components/Icon#Icon',
       }
     },
-    meta: {
-      titleSuffix: '- Sherlock AI',
-    }
-  },
   cors: [
     'http://localhost:5173', 
     'http://localhost:4000', 
     'https://sherlock-ivory.vercel.app', 
     process.env.FRONTEND_URL || '',
     process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
-    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''
+    process.env.VERCEL_BRANCH_URL ? `https://${process.env.VERCEL_BRANCH_URL}` : '',
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '',
+    'https://ask-sherlock-cms-git-main-ask-sherlock.vercel.app'
   ].filter(Boolean),
   csrf: [
     'http://localhost:5173', 
@@ -46,7 +44,9 @@ export default buildConfig({
     'https://sherlock-ivory.vercel.app', 
     process.env.FRONTEND_URL || '',
     process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
-    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''
+    process.env.VERCEL_BRANCH_URL ? `https://${process.env.VERCEL_BRANCH_URL}` : '',
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '',
+    'https://ask-sherlock-cms-git-main-ask-sherlock.vercel.app'
   ].filter(Boolean),
   collections: [Users, Media, Posts, Testimonials],
   globals: [SiteSettings],
