@@ -3,10 +3,10 @@
 html, body, html[data-theme='dark'] {
   --theme-bg: #000000 !important;
   --theme-elevation-0: #000000 !important;
-  --theme-elevation-50: #050505 !important;
-  --theme-elevation-100: #0a0a0a !important;
-  --theme-elevation-150: #111111 !important;
-  --theme-elevation-200: #1a1a1a !important;
+  --theme-elevation-50: #08080c !important; 
+  --theme-elevation-100: #111118 !important; /* Card background */
+  --theme-elevation-150: #1f1f2e !important; /* Card borders */
+  --theme-elevation-200: #2d2d44 !important;
   
   --theme-elevation-500: #7c3aed !important;
   --theme-elevation-400: #8b5cf6 !important;
