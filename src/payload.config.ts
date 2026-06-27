@@ -31,6 +31,13 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- Sherlock AI',
+      icons: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          url: '/favicon.svg',
+        },
+      ],
     }
   },
   cors: [
