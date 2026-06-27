@@ -1,35 +1,35 @@
 /* Sherlock Custom Theme for Payload Admin */
 :root {
-  --theme-elevation-500: #38bdf8;
-  --theme-elevation-400: #0ea5e9;
-  --theme-success-400: #38bdf8;
-  --theme-success-500: #0ea5e9;
+  --theme-elevation-500: #7c3aed;
+  --theme-elevation-400: #8b5cf6;
+  --theme-success-400: #7c3aed;
+  --theme-success-500: #8b5cf6;
 }
 
 html[data-theme='dark'] {
-  --theme-elevation-500: #38bdf8;
-  --theme-elevation-400: #0ea5e9;
-  --theme-success-400: #38bdf8;
-  --theme-success-500: #0ea5e9;
+  --theme-elevation-500: #7c3aed;
+  --theme-elevation-400: #8b5cf6;
+  --theme-success-400: #7c3aed;
+  --theme-success-500: #8b5cf6;
 }
 
 /* Force override for the login button and primary actions */
 .btn--style-primary {
-  background-color: #38bdf8 !important;
-  color: #0f172a !important;
-  border-color: #38bdf8 !important;
+  background-color: #7c3aed !important;
+  color: #f8fafc !important;
+  border-color: #7c3aed !important;
   font-weight: 600 !important;
 }
 
 .btn--style-primary:hover {
-  background-color: #0ea5e9 !important;
-  border-color: #0ea5e9 !important;
+  background-color: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
 }
 
 /* Sidebar active link styling */
 .nav-group__content .nav__link--active,
 .nav-group__content .nav__link--active:hover {
-  color: #38bdf8 !important;
+  color: #7c3aed !important;
 }
 
 /* Subtle glow for the logo container we added */
@@ -38,6 +38,6 @@ html[data-theme='dark'] {
 }
 
 @keyframes glowPulse {
-  0% { filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.2)); }
-  100% { filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6)); }
+  0% { filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.2)); }
+  100% { filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.6)); }
 }
