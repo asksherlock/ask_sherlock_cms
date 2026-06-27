@@ -1,27 +1,35 @@
 /* Sherlock Custom Theme for Payload Admin */
-:root {
-  --theme-elevation-500: #7c3aed;
-  --theme-elevation-400: #8b5cf6;
-  --theme-success-400: #7c3aed;
-  --theme-success-500: #8b5cf6;
-}
 
-html[data-theme='dark'] {
-  --theme-elevation-500: #7c3aed;
-  --theme-elevation-400: #8b5cf6;
-  --theme-success-400: #7c3aed;
-  --theme-success-500: #8b5cf6;
+html, body, html[data-theme='dark'] {
+  --theme-bg: #000000 !important;
+  --theme-elevation-0: #000000 !important;
+  --theme-elevation-50: #050505 !important;
+  --theme-elevation-100: #0a0a0a !important;
+  --theme-elevation-150: #111111 !important;
+  --theme-elevation-200: #1a1a1a !important;
+  
+  --theme-elevation-500: #7c3aed !important;
+  --theme-elevation-400: #8b5cf6 !important;
+  --theme-success-400: #7c3aed !important;
+  --theme-success-500: #8b5cf6 !important;
+  
+  background-color: #000000 !important;
 }
 
 /* Force override for the login button and primary actions */
-.btn--style-primary {
+button[type="submit"],
+.btn--style-primary,
+button.btn--style-primary {
   background-color: #7c3aed !important;
-  color: #f8fafc !important;
+  color: #ffffff !important;
   border-color: #7c3aed !important;
   font-weight: 600 !important;
+  transition: all 0.2s ease !important;
 }
 
-.btn--style-primary:hover {
+button[type="submit"]:hover,
+.btn--style-primary:hover,
+button.btn--style-primary:hover {
   background-color: #8b5cf6 !important;
   border-color: #8b5cf6 !important;
 }
@@ -38,6 +46,7 @@ html[data-theme='dark'] {
 }
 
 @keyframes glowPulse {
-  0% { filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.2)); }
-  100% { filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.6)); }
+  0% { filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.2)); }
+  100% { filter: drop-shadow(0 0 25px rgba(124, 58, 237, 0.6)); }
 }
+
