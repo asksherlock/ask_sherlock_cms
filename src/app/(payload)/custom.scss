@@ -1,0 +1,43 @@
+/* Sherlock Custom Theme for Payload Admin */
+:root {
+  --theme-elevation-500: #38bdf8;
+  --theme-elevation-400: #0ea5e9;
+  --theme-success-400: #38bdf8;
+  --theme-success-500: #0ea5e9;
+}
+
+html[data-theme='dark'] {
+  --theme-elevation-500: #38bdf8;
+  --theme-elevation-400: #0ea5e9;
+  --theme-success-400: #38bdf8;
+  --theme-success-500: #0ea5e9;
+}
+
+/* Force override for the login button and primary actions */
+.btn--style-primary {
+  background-color: #38bdf8 !important;
+  color: #0f172a !important;
+  border-color: #38bdf8 !important;
+  font-weight: 600 !important;
+}
+
+.btn--style-primary:hover {
+  background-color: #0ea5e9 !important;
+  border-color: #0ea5e9 !important;
+}
+
+/* Sidebar active link styling */
+.nav-group__content .nav__link--active,
+.nav-group__content .nav__link--active:hover {
+  color: #38bdf8 !important;
+}
+
+/* Subtle glow for the logo container we added */
+.sherlock-logo-container {
+  animation: glowPulse 4s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.2)); }
+  100% { filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6)); }
+}
